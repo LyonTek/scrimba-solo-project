@@ -1,0 +1,168 @@
+body {
+    margin: 0;                                  /* Remove space around the edge of the page */
+    text-align: center;                         /* Put all the text in the middle */
+    font-family: "Roboto Mono", monospace;      /* Use a special type of writing */
+    color: #F1FAEE;                             /* Make the words light-colored */
+    background-color: #1D3557;                  /* Make the background dark blue */
+}
+
+img {
+    width: 100px;                               /* Make all pictures 100 pixels wide */
+}
+
+.hero {
+    position: relative;                         /* Let us put things on top of this */
+    background-image: url('images/casabonita-main2.png'); /* Put a picture in the background */
+    background-size: cover;                     /* Make the picture fill the whole space */
+    background-position: center;                /* Put the middle of the picture in the center */
+    height: 100vh;                              /* Make it as tall as the screen */
+    display: flex;                              /* Use a special way to arrange things */
+    justify-content: center;                    /* Put things in the middle left-to-right */
+    align-items: center;                        /* Put things in the middle top-to-bottom */
+    flex-direction: column;                     /* Stack things on top of each other */
+    text-align: center;                         /* Put all the text in the middle */
+    color: #F1FAEE;                             /* Make the words light-colored */
+    border-radius: 0 0 50px 50px;               /* Make the bottom corners round */
+    padding: 20px;                              /* Add some space inside the edges */
+    animation: fadeIn 2s ease-in-out;           /* Make it appear slowly */
+}
+
+
+.hero h1, .hero h2 {
+    color: #FFFFFF;                             /* Make the words white */
+    background-color: black;                    /* Put a black box behind the words */
+    padding: 10px;                              /* Add some space around the words */
+    border-radius: 10px;                        /* Make the corners of the box round */
+    margin-bottom: 20px;                        /* Add some space below */
+    z-index: 2;                                 /* Make sure it's on top of other things */
+    position: relative;                         /* Let us move it around if we need to */
+    animation: fadeIn 2s ease-in-out;           /* Make it appear slowly */
+}
+
+
+.activities {
+    margin-top: 50px;
+}
+
+.activities h3 {
+    font-size: 1.8rem; /* Increase the font size for the heading */
+    margin-bottom: 30px; /* Add spacing between the heading and images */
+}
+
+.activity-images {
+    display: flex;
+    justify-content: space-evenly; /* Spread the images evenly */
+    align-items: center; /* Align the images to the center vertically */
+    gap: 30px; /* Add spacing between images */
+    padding: 0 20px; /* Add horizontal padding for responsiveness */
+}
+
+.activity-images img {
+    width: 250px; /* Increase image width */
+    height: 350px; /* Increase image height */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    border-radius: 10px; /* Adds a slight border radius */
+    transition: transform 0.3s ease; /* Adds smooth scaling on hover */
+}
+
+.activity-images img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#activity-1-cave {
+    border: solid white;
+}   
+
+#activity-2-lagoon {
+    border: solid white;
+}
+
+#activity-3-guy {
+    border: solid white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .activity-images {
+        flex-direction: column; /* Stacks images vertically on smaller screens */
+        gap: 15px;
+    }
+
+    .activity-images img {
+        width: 90%; /* Make the images take up 90% of the screen width */
+        height: auto; /* Let the height adjust accordingly */
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh; /* Adjust hero height for mobile */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .hero h2 {
+        font-size: 1.2rem; /* Adjust subheading size for mobile */
+    }
+}
+
+.guide img {
+    width: 250px; /* Set the desired width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Slight rounding for consistency */
+    object-fit: cover; /* Ensures proper cropping */
+    margin-top: 20px; /* Add spacing from the text */
+    transition: transform 0.3s ease; /* Adds smooth scaling on hover */ 
+    margin-bottom: 20px; /* Space between the image and quote */
+
+}
+
+.guide img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.guide h3 {
+    font-size: 1.8rem; /* Increase the font size for the heading */
+    margin-bottom: 30px; /* Add spacing between the heading and images */
+}
+
+#guide-img {
+    border: solid white;
+}
+
+.quote-container {
+    width: 60%; /* Control the width of the quote container */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px;
+}
+
+.quote-container blockquote {
+    font-style: italic;
+    font-size: 1.2rem; /* Adjust font size for better readability */
+    margin-bottom: 10px; /* Space between the quote and the author's name */
+}
+
+.quote-container p {
+    font-weight: bold;
+    font-size: 1rem; /* Adjust font size for the author's name */
+}
